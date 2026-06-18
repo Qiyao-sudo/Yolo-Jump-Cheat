@@ -1,0 +1,13 @@
+# YOLO 跳一跳外挂依赖
+# torch 必须用 CUDA 轮子（匹配 RTX 5070 / CUDA 12.x）：
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+ultralytics>=8.2.0
+torch
+opencv-python
+mss
+pywin32
+pyautogui
+pynput
+numpy
+pyyaml
+Pillow

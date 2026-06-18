@@ -1,0 +1,9 @@
+# YOLOv8 数据集定义
+# 训练前先跑 `python src/annotate_helper.py split` 把 data/images 划分到 train/val
+path: D:/Project/yolo TYT/data   # 绝对路径，避免被 ultralytics 解析到 datasets_dir
+train: images/train
+val: images/val
+
+names:
+  0: piece              # 棋子
+  1: platform           # 目标方块

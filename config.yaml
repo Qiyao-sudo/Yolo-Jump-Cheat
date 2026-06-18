@@ -1,0 +1,35 @@
+# ===== YOLO 跳一跳外挂 配置 =====
+
+# 微信小程序游戏窗口标题关键字（EnumWindows 模糊匹配）
+window_title: "跳一跳"
+
+# 游戏画面在窗口矩形内的裁剪边距（像素）。微信小程序窗口里游戏画面两侧
+# 常有黑边/留白，把这些裁掉能让 YOLO 更准。先填 0，调试时按需调整。
+crop_margin:
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+
+# 按压系数：press_ms = distance_px * k + b
+# 经验值 k≈1.3~2.0（随窗口分辨率/DPI 缩放变化），用 calibrate.py 标定。
+press:
+  k: 1.85
+  b: 0
+
+# 全局热键
+hotkeys:
+  start: f9      # 启动自动跳跃
+  stop: f10      # 停止
+  exit: esc      # 退出程序
+
+# 每跳之间的随机间隔（秒），模拟人类节奏 + 等跳跃/落分动画
+loop:
+  min_interval: 2
+  max_interval: 4
+
+# 模型权重路径
+model: models/best.pt
+
+# 推理置信度阈值
+detect_conf: 0.4
